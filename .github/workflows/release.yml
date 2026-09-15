@@ -1,0 +1,34 @@
+name: release
+
+# Build and release the resume PDF on version tags only — never on every commit.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write   # create the release
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Typst 0.15.1
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: 0.15.1
+
+      - name: Fetch Inter
+        run: |
+          mkdir -p fonts
+          curl -gsSL -o fonts/Inter.ttf        "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf"
+          curl -gsSL -o fonts/Inter-Italic.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter-Italic%5Bopsz%2Cwght%5D.ttf"
+
+      - name: Build PDF
+        run: typst compile --font-path fonts resume.typ Miraculous-Owonubi-Resume.pdf
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Miraculous-Owonubi-Resume.pdf
