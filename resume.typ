@@ -49,7 +49,7 @@
 
 #entry[Independent Engineering & Open Source][September 2025 – Present]
 #role[Rust Systems & Protocol Engineering][Remote]
-- *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed peer-to-peer overlay and services layer. Reach any machine by its ed25519 identity, not its IP or location, across NATs, with no address, account, or server in between. I ran it on iroh, then hand-wrote my own QUIC-over-UDP stack to the same trait and proved the two interchangeable under one conformance suite that ships decoy transports so it cannot pass by accident.
+- *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed peer-to-peer overlay and services layer. Reach any machine by its ed25519 identity, not its IP or location, across NATs, with no address, account, or server in between. Generalized the transport behind one trait: runs on iroh or a QUIC-over-UDP stack I hand-wrote, proven interchangeable by a conformance suite that ships decoy transports so it can't pass by accident.
   - *nauthy* (capability auth): the key IS the identity, so authorization roots at the key the transport already proved, on biscuit and ed25519, verified offline against a single held key, no coordinator; attenuable, expiring, revocable, with a single-use admission witness whose replay-safety is enforced at compile time.
   - *Services:* any node exposes named, capability-gated services reachable by key, keyless SSH (the stream's admission is the only credential), HTTP fetch, BLAKE3-verified file transfer, and link measurement, all behind one CLI (swoosh), backed by 300+ integration tests.
 - *Execution engine & storage:* built the sequencing and execution layer for private Ethereum L2s in Rust: an actor-model core and a purpose-built zero-copy storage engine with snapshot-isolated reads and atomic block-commit, on revm and alloy.
@@ -68,8 +68,8 @@
 #block(breakable: false)[
   #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
   #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][San Francisco, CA]
-  - Sole author and maintainer of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
-  - Contributed to cargo-near and introduced contract ABIs to NEAR; discovered and documented exploits in the NEAR BOS platform that led to a working group for reinventing its virtual machine.
+  - 80+ merged PRs across nearcore (the 2.6k-star NEAR reference client) and its Rust tooling; sole author and maintainer of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
+  - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs (a codeowner of the SDK) and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that led to a working group for reinventing its virtual machine.
   - Cut CI and Docker build times by up to 82%, most notably for the FastAuth account-recovery node tests.
 
   #role[Senior Software Engineer, Node Interfaces #h(6pt) (March 2021 – December 2021)][]
@@ -81,6 +81,7 @@
   #role[Software Engineer][Remote]
   - *freyr* (Node.js): an open-source music-downloader CLI (Spotify, Apple Music, Deezer) with metadata and library organization. 2.3k+ stars, 15k+ DockerHub pulls.
   - *cargo-workspaces* (Rust): a maintained fork with substantial patches for nearcore's workspace complexity; *xget* (Node.js): a concurrent chunked web-content downloader.
+  - *Upstream:* merged contributions to tickrs (1.7k-star stock TUI, 17 PRs), Apache Arrow's object_store, rustyline, and dialoguer.
 ]
 
 = Skills
