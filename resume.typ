@@ -36,9 +36,7 @@
   #text(size: 26pt, weight: "bold", fill: accent)[Miraculous Owonubi]
   #v(3pt)
   #text(fill: accent, weight: "medium", size: 11pt, tracking: 0.02em)[Senior Rust Engineer  ·  Distributed Systems, P2P Networking, Protocol]
-  #v(3pt)
-  #pad(x: 12%)[#text(fill: muted, style: "italic", size: 10pt)[I build the infrastructure other engineers depend on. Correctness first, cleverness never: illegal states unrepresentable, tests that can't lie.]]
-  #v(5pt)
+  #v(6pt)
   #text(size: 9pt)[
     Remote · GMT+1 #h(5pt)|#h(5pt) #link("mailto:omiraculous@gmail.com")[omiraculous\@gmail.com] #h(5pt)|#h(5pt) #link("https://github.com/miraclx")[github.com/miraclx] #h(5pt)|#h(5pt) #link("https://www.linkedin.com/in/miraclx")[linkedin.com/in/miraclx]
   ]
