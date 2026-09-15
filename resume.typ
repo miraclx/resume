@@ -39,8 +39,8 @@
   #v(3pt)
   #pad(x: 12%)[#text(fill: muted, style: "italic", size: 10pt)[I build the infrastructure other engineers depend on. Correctness first, cleverness never: illegal states unrepresentable, tests that can't lie.]]
   #v(5pt)
-  #text(size: 8.5pt)[
-    Remote · GMT+1 #h(4pt)|#h(4pt) +234 705 396 1594 #h(4pt)|#h(4pt) #link("mailto:omiraculous@gmail.com")[omiraculous\@gmail.com] #h(4pt)|#h(4pt) #link("https://github.com/miraclx")[github.com/miraclx] #h(4pt)|#h(4pt) #link("https://www.linkedin.com/in/miraclx")[linkedin.com/in/miraclx]
+  #text(size: 9pt)[
+    Remote · GMT+1 #h(5pt)|#h(5pt) #link("mailto:omiraculous@gmail.com")[omiraculous\@gmail.com] #h(5pt)|#h(5pt) #link("https://github.com/miraclx")[github.com/miraclx] #h(5pt)|#h(5pt) #link("https://www.linkedin.com/in/miraclx")[linkedin.com/in/miraclx]
   ]
 ]
 #v(3pt)
@@ -50,10 +50,10 @@
 #entry[Independent Engineering & Open Source][September 2025 – Present]
 #role[Rust Systems & Protocol Engineering][Remote]
 - *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed peer-to-peer overlay and services layer. Reach any machine by its ed25519 identity, not its IP or location, across NATs, with no address, account, or server in between. I ran it on iroh, then hand-wrote my own QUIC-over-UDP stack to the same trait and proved the two interchangeable under one conformance suite that ships decoy transports so it cannot pass by accident.
-  - *nauthy* (capability auth): control-plane-free, on biscuit and ed25519, verified offline against a single held key with no coordinator; attenuable, expiring, and revocable, with a single-use admission witness whose replay-safety is enforced at compile time.
+  - *nauthy* (capability auth): the key IS the identity, so authorization roots at the key the transport already proved, on biscuit and ed25519, verified offline against a single held key, no coordinator; attenuable, expiring, revocable, with a single-use admission witness whose replay-safety is enforced at compile time.
   - *Services:* any node exposes named, capability-gated services reachable by key, keyless SSH (the stream's admission is the only credential), HTTP fetch, BLAKE3-verified file transfer, and link measurement, all behind one CLI (swoosh), backed by 300+ integration tests.
-- *Ethereum execution & L2:* architected a ZK-rollup L2 sequencer from scratch in Rust: an actor-model core, a purpose-built zero-copy storage engine with snapshot-isolated reads and atomic block-commit, and deposits unlinkable to zone identities by construction, not policy. Built and ran private L2s on revm and alloy; studied reth's execution pipeline end to end.
-- *Edge & NAT traversal:* built and deployed an edge-aware caching reverse proxy with distributed edge nodes for high-latency last-mile networks; studied NAT-traversal and relay internals through the Tailscale and magicsock codebases.
+- *Execution engine & storage:* built the sequencing and execution layer for private Ethereum L2s in Rust: an actor-model core and a purpose-built zero-copy storage engine with snapshot-isolated reads and atomic block-commit, on revm and alloy.
+- *Edge caching & proxy:* built and deployed an edge-aware caching reverse proxy with distributed edge nodes for high-latency, last-mile networks.
 
 #entry[Calimero Network][September 2023 – August 2025]
 #role[Engineering Lead #h(6pt) (April 2024 – August 2025)][London, UK]
@@ -66,7 +66,7 @@
 - Wrote a paper on end-to-end encryption for dynamic groups; mentored the team through its adoption of Rust.
 
 #block(breakable: false)[
-  #entry[Pagoda, Inc. (fka Near, Inc.)][March 2021 – June 2023]
+  #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
   #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][San Francisco, CA]
   - Sole author and maintainer of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
   - Contributed to cargo-near and introduced contract ABIs to NEAR; discovered and documented exploits in the NEAR BOS platform that led to a working group for reinventing its virtual machine.
@@ -80,16 +80,16 @@
   #entry[Open Source & Freelance][January 2016 – Present]
   #role[Software Engineer][Remote]
   - *freyr* (Node.js): an open-source music-downloader CLI (Spotify, Apple Music, Deezer) with metadata and library organization. 2.3k+ stars, 15k+ DockerHub pulls.
-  - *cargo-workspaces* (Rust): maintain a fork with substantial patches for the workspace complexity in nearcore. *xget* (Node.js): a concurrent chunked web-content downloader. *frida* (Rust, Node.js): a privately-built web-access gateway with metrics, access control, and rate limiting.
+  - *cargo-workspaces* (Rust): a maintained fork with substantial patches for nearcore's workspace complexity; *xget* (Node.js): a concurrent chunked web-content downloader.
 ]
 
 = Skills
 #text(size: 9.5pt)[
   *Languages:* Rust (expert); Python, JavaScript, TypeScript (proficient); C/C++, Go (reading fluency).
 
-  *Systems & networking:* P2P and mesh networking, libp2p, iroh, custom transports, QUIC, NAT traversal; storage engines (RocksDB, LMDB); operating systems, Linux internals, virtualization, containers.
+  *Systems & networking:* P2P and mesh networking, libp2p, iroh, custom transports, QUIC, NAT traversal, async Rust (tokio); storage engines (RocksDB, LMDB); operating systems, Linux internals, virtualization, containers.
 
-  *Protocol & blockchain:* distributed-systems and consensus design, Ethereum execution (reth, revm, alloy), WASM / RISC-V / eBPF runtimes, applied cryptography and capability security.
+  *Distributed systems & protocol:* consensus and protocol design, Ethereum execution (reth, revm, alloy), WebAssembly (WASM) runtimes, applied cryptography and capability security.
 
   *Craft:* clean API design (libraries, REST, JSON-RPC), CLI and TUI, CI/CD, debugging, profiling, reverse engineering, exhaustive testing (unit, integration, fuzz).
 ]
