@@ -37,8 +37,8 @@
   #v(3pt)
   #text(fill: accent, weight: "medium", size: 11pt, tracking: 0.02em)[Senior Rust Engineer  ·  Distributed Systems, P2P Networking, Protocol]
   #v(6pt)
-  #text(size: 9pt)[
-    Remote · GMT+1 #h(5pt)|#h(5pt) #link("mailto:omiraculous@gmail.com")[omiraculous\@gmail.com] #h(5pt)|#h(5pt) #link("https://github.com/miraclx")[github.com/miraclx] #h(5pt)|#h(5pt) #link("https://www.linkedin.com/in/miraclx")[linkedin.com/in/miraclx]
+  #text(size: 8.5pt)[
+    Remote · GMT+1 #h(4pt)|#h(4pt) #link("mailto:omiraculous@gmail.com")[omiraculous\@gmail.com] #h(5pt)|#h(5pt) #link("https://miraclx.github.io")[miraclx.github.io] #h(5pt)|#h(5pt) #link("https://github.com/miraclx")[github.com/miraclx] #h(5pt)|#h(5pt) #link("https://www.linkedin.com/in/miraclx")[linkedin.com/in/miraclx]
   ]
 ]
 #v(3pt)
@@ -48,7 +48,7 @@
 #entry[Independent Engineering & Open Source][September 2025 – Present]
 #role[Rust Systems & Protocol Engineering][Remote]
 - *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed peer-to-peer overlay and services layer I architected and built solo. Reach any machine by its ed25519 identity, not its IP or location, across NATs, with no address, account, or server in between. Generalized the transport behind one trait: runs on iroh or a QUIC-style UDP transport I wrote from scratch, proven interchangeable under an adversarial conformance suite that rejects any transport that lies about who it reaches.
-  - *nauthy* (capability auth): the key IS the identity, so authorization roots at the key the transport already proved, on biscuit and ed25519, verified offline against a single held key, no coordinator; attenuable, expiring, revocable, with a single-use admission witness whose replay-safety is enforced at compile time.
+  - *nauthy* (capability auth): the key IS the identity, so authorization roots at the key the transport already proved, on biscuit and ed25519, verified offline against a single held key, no coordinator; attenuable, expiring, revocable, with a single-use admission witness enforced at compile time.
   - *Services:* any node exposes named, capability-gated services reachable by key, keyless SSH (the stream's admission is the only credential), HTTP fetch, BLAKE3-verified file transfer, and link measurement, all behind one CLI (swoosh), backed by 300+ integration tests.
 - *Execution engine & storage:* built the sequencing and execution layer for private Ethereum L2s in Rust: an actor-model core and a purpose-built zero-copy storage engine with snapshot-isolated reads and atomic block-commit, on revm and alloy.
 - *Edge caching & proxy:* built and deployed an edge-aware caching reverse proxy with distributed edge nodes for high-latency, last-mile networks.
@@ -59,7 +59,7 @@
 - Led the node architecture overhaul from monolithic to an actor model, and built recursive state sync between nodes (privileged state catchup, blob sharing, key distribution).
 - Primary reviewer across the codebase: protocol proposals and the bulk of merged PRs.
 
-#role[Senior Software Engineer, Protocol #h(6pt) (September 2023 – May 2024)][]
+#role[Senior Software Engineer, Protocol #h(6pt) (September 2023 – March 2024)][]
 - The Calimero protocol started as my internal-hackathon submission and became the company's direction; I built its core: the networking stack (rust-libp2p, hole-punching and relay for resilient connectivity between distant nodes), a WASM runtime layer on Wasmer with a trivially swappable engine, layered zero-copy storage abstractions, and the guest-app SDK (proc-macros plus FFI to the WASM host).
 - Wrote a paper on end-to-end encryption for dynamic groups; mentored the team through its adoption of Rust.
 
@@ -67,7 +67,7 @@
   #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
   #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][San Francisco, CA]
   - 80+ merged PRs across nearcore (the 2.6k-star NEAR reference client) and its Rust tooling; sole author and maintainer of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
-  - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs (a codeowner of the SDK) and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that led to a working group for reinventing its virtual machine.
+  - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that led to a working group for reinventing its virtual machine.
   - Cut CI and Docker build times by up to 82%, most notably for the FastAuth account-recovery node tests.
 
   #role[Senior Software Engineer, Node Interfaces #h(6pt) (March 2021 – December 2021)][]
@@ -88,7 +88,7 @@
 
   *Systems & networking:* P2P and mesh networking, libp2p, iroh, custom transports, QUIC, NAT traversal, async Rust (tokio); storage engines (RocksDB, LMDB); operating systems, Linux internals, virtualization, containers.
 
-  *Distributed systems & protocol:* consensus and protocol design, Ethereum execution (reth, revm, alloy), WebAssembly (WASM) runtimes, applied cryptography and capability security.
+  *Distributed systems & protocol:* consensus and protocol design, Ethereum execution (revm, alloy), WebAssembly (WASM) runtimes, applied cryptography and capability security.
 
   *Craft:* clean API design (libraries, REST, JSON-RPC), CLI and TUI, CI/CD, debugging, profiling, reverse engineering, exhaustive testing (unit, integration, fuzz).
 ]
