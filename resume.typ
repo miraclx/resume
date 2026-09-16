@@ -58,7 +58,7 @@
 - *BIM / 3D reconstruction:* built software that reconstructs LOD200 building models from noisy, occluded real-world point-cloud scans: denoising, clutter and furniture removal, and classification of architectural elements (walls, windows, stairs, arches), with a guided UX that folds the user into the analysis.
 
 #entry[Calimero Network][September 2023 – August 2025]
-#role[Systems Engineer, then Engineering Lead][London, UK]
+#role[Senior Software Engineer, then Engineering Lead][Remote]
 - Brought in as the systems engineer for Calimero's hardest problems across the stack. When the original private-sharding direction stalled, the protocol I prototyped won the internal hackathon and became the company's new one.
 - Architected and built that protocol's stack end to end: the node-to-node wire format, networking (rust-libp2p, hole-punching and relay), CRDT-state foundations, recursive state sync between nodes, an actor-model core, a purpose-built zero-copy storage layer, a Wasmer runtime with a swappable engine, and the guest-app SDK (proc-macros plus FFI).
 - Designed both generations of the protocol, a transactional proof-of-concept then an eventually-consistent redesign, and its end-to-end encryption for dynamic groups; authored the adopted spec paper and a paper on the encryption.
@@ -66,7 +66,7 @@
 
 #block(breakable: false)[
   #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
-  #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][San Francisco, CA]
+  #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][Remote]
   - 80+ merged PRs across nearcore (the 2.6k-star NEAR reference client) and its Rust tooling; creator and principal author of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
   - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that fed into a working group for reinventing its virtual machine.
   - Cut CI and Docker build times by up to 82%, most notably for the FastAuth account-recovery node tests.
