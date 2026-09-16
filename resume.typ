@@ -44,8 +44,8 @@
 #v(3pt)
 
 = Highlights
-- Core engineer on *NEAR Protocol*: 80+ merged PRs to nearcore (the 2.6k-star reference client), and creator and lead maintainer of its Rust JSON-RPC client (176 commits to the next contributor's 30).
-- Engineering lead at *Calimero*: drove the protocol's redesign, authored the adopted spec paper, primary reviewer across a 200+ PR codebase.
+- *NEAR Protocol* (core engineer): 80+ merged PRs to nearcore (the 2.6k-star reference client), and creator and principal author of its Rust JSON-RPC client (176 commits to the next contributor's 30).
+- *Calimero* (engineering lead): drove the protocol's redesign, authored the adopted spec paper, primary reviewer across a 200+ PR codebase.
 - Shipped, adopted open source: *freyr* at 2.3k stars and 42k Docker pulls, plus upstream work in tickrs, Apache Arrow, rustyline, and dialoguer.
 
 = Experience
@@ -70,7 +70,7 @@
 #block(breakable: false)[
   #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
   #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][San Francisco, CA]
-  - 80+ merged PRs across nearcore (the 2.6k-star NEAR reference client) and its Rust tooling; creator and lead maintainer of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
+  - 80+ merged PRs across nearcore (the 2.6k-star NEAR reference client) and its Rust tooling; creator and principal author of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
   - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that led to a working group for reinventing its virtual machine.
   - Cut CI and Docker build times by up to 82%, most notably for the FastAuth account-recovery node tests.
 
