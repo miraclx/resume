@@ -44,7 +44,7 @@
 #v(3pt)
 
 = Highlights
-- *NEAR Protocol* (core engineer): 80+ merged PRs to nearcore (the 2.6k-star reference client), and creator and principal author of its Rust JSON-RPC client (176 commits to the next contributor's 30).
+- *NEAR Protocol* (core engineer): creator and principal author of its Rust JSON-RPC client, and 80+ merged PRs across nearcore itself (the 2.6k-star reference client).
 - *Calimero* (engineering lead): drove the protocol's redesign, authored the adopted spec paper, primary reviewer across a 200+ PR codebase.
 - Shipped, adopted open source: *freyr* at 2.3k stars and 42k Docker pulls, plus upstream work in tickrs, Apache Arrow, rustyline, and dialoguer.
 
