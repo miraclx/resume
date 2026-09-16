@@ -45,7 +45,7 @@
 
 = Highlights
 - *NEAR Protocol* (core engineer): creator and principal author of its Rust JSON-RPC client, and 80+ merged PRs across nearcore itself (the 2.6k-star reference client).
-- *Calimero* (engineering lead): drove the protocol's redesign, authored the adopted spec paper, primary reviewer across a 200+ PR codebase.
+- *Calimero* (engineering lead): built the protocol that became the company's direction, designed both generations, primary reviewer across the codebase.
 - Shipped, adopted open source: *freyr* at 2.3k stars and 42k Docker pulls, plus upstream work in tickrs, Apache Arrow, rustyline, and dialoguer.
 
 = Experience
@@ -58,14 +58,11 @@
 - *BIM / 3D reconstruction:* built software that reconstructs LOD200 building models from noisy, occluded real-world point-cloud scans: denoising, clutter and furniture removal, and classification of architectural elements (walls, windows, stairs, arches), with a guided UX that folds the user into the analysis.
 
 #entry[Calimero Network][September 2023 – August 2025]
-#role[Engineering Lead #h(6pt) (April 2024 – August 2025)][London, UK]
-- Redesigned the protocol from its original transactional model to an eventually-consistent design, unlocking non-determinism and expanding its design space, and authored the spec paper that was formally adopted and implemented.
-- Led the node architecture overhaul from monolithic to an actor model, and built recursive state sync between nodes (privileged state catchup, blob sharing, key distribution).
-- Primary reviewer across the codebase: protocol proposals and the bulk of merged PRs.
-
-#role[Senior Software Engineer, Protocol #h(6pt) (September 2023 – March 2024)][]
-- The Calimero protocol started as my internal-hackathon submission and became the company's direction; I built its core: the networking stack (rust-libp2p, hole-punching and relay for resilient connectivity between distant nodes), a WASM runtime layer on Wasmer with a trivially swappable engine, layered zero-copy storage abstractions, and the guest-app SDK (proc-macros plus FFI to the WASM host).
-- Wrote a paper on end-to-end encryption for dynamic groups; mentored the team through its adoption of Rust.
+#role[Systems Engineer, then Engineering Lead][London, UK]
+- Brought in as the systems engineer for Calimero's hardest problems across the stack. When the original private-sharding direction stalled, the protocol I prototyped won the internal hackathon and became the company's new one.
+- Architected and built that protocol's stack end to end: the node-to-node wire format, networking (rust-libp2p, hole-punching and relay), CRDT-state foundations, recursive state sync between nodes, an actor-model core, a purpose-built zero-copy storage layer, a Wasmer runtime with a swappable engine, and the guest-app SDK (proc-macros plus FFI).
+- Designed both generations of the protocol, a transactional proof-of-concept then an eventually-consistent redesign, and its end-to-end encryption for dynamic groups; authored the adopted spec paper and a paper on the encryption.
+- As Engineering Lead, grew a team mostly new to Rust through hands-on knowledge-transfer, and hired and developed several engineers; primary reviewer across protocol proposals and the codebase.
 
 #block(breakable: false)[
   #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
