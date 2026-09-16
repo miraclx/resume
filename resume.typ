@@ -59,7 +59,7 @@
 
 #entry[Calimero Network][September 2023 – August 2025]
 #role[Engineering Lead #h(6pt) (April 2024 – August 2025)][London, UK]
-- Drove the protocol's shift from a transactional blockchain model to an eventually-consistent design, unlocking non-determinism and expanding its design space, and authored the spec paper that was formally adopted and implemented.
+- Redesigned the protocol from its original transactional model to an eventually-consistent design, unlocking non-determinism and expanding its design space, and authored the spec paper that was formally adopted and implemented.
 - Led the node architecture overhaul from monolithic to an actor model, and built recursive state sync between nodes (privileged state catchup, blob sharing, key distribution).
 - Primary reviewer across the codebase: protocol proposals and the bulk of merged PRs.
 
