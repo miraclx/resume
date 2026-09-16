@@ -47,7 +47,7 @@
 
 #entry[Independent Engineering & Open Source][September 2025 – Present]
 #role[Rust Systems & Protocol Engineering][Remote]
-- *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed peer-to-peer overlay and services layer I architected and built solo. Reach any machine by its ed25519 identity, not its IP or location, across NATs, with no address, account, or server in between. Generalized the transport behind one trait: runs on iroh or a QUIC-style UDP transport I wrote from scratch, proven interchangeable by a conformance suite that ships decoy transports so it can't pass by accident.
+- *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed peer-to-peer overlay and services layer I architected and built solo. Reach any machine by its ed25519 identity, not its IP or location, across NATs, with no address, account, or server in between. Generalized the transport behind one trait: runs on iroh or a QUIC-style UDP transport I wrote from scratch, proven interchangeable under an adversarial conformance suite that rejects any transport that lies about who it reaches.
   - *nauthy* (capability auth): the key IS the identity, so authorization roots at the key the transport already proved, on biscuit and ed25519, verified offline against a single held key, no coordinator; attenuable, expiring, revocable, with a single-use admission witness whose replay-safety is enforced at compile time.
   - *Services:* any node exposes named, capability-gated services reachable by key, keyless SSH (the stream's admission is the only credential), HTTP fetch, BLAKE3-verified file transfer, and link measurement, all behind one CLI (swoosh), backed by 300+ integration tests.
 - *Execution engine & storage:* built the sequencing and execution layer for private Ethereum L2s in Rust: an actor-model core and a purpose-built zero-copy storage engine with snapshot-isolated reads and atomic block-commit, on revm and alloy.
@@ -57,7 +57,7 @@
 #role[Engineering Lead #h(6pt) (April 2024 – August 2025)][London, UK]
 - Drove the protocol's shift from a transactional blockchain model to an eventually-consistent design, unlocking non-determinism and expanding its design space, and authored the spec paper that was formally adopted and implemented.
 - Led the node architecture overhaul from monolithic to an actor model, and built recursive state sync between nodes (privileged state catchup, blob sharing, key distribution).
-- Primary reviewer across the codebase: every protocol proposal and the bulk of merged PRs.
+- Primary reviewer across the codebase: protocol proposals and the bulk of merged PRs.
 
 #role[Senior Software Engineer, Protocol #h(6pt) (September 2023 – May 2024)][]
 - The Calimero protocol started as my internal-hackathon submission and became the company's direction; I built its core: the networking stack (rust-libp2p, hole-punching and relay for resilient connectivity between distant nodes), a WASM runtime layer on Wasmer with a trivially swappable engine, layered zero-copy storage abstractions, and the guest-app SDK (proc-macros plus FFI to the WASM host).
