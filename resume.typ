@@ -44,9 +44,9 @@
 #v(3pt)
 
 = Highlights
-- *NEAR Protocol* (core engineer): creator and principal author of its Rust JSON-RPC client, and 80+ merged PRs across nearcore itself (the 2.6k-star reference client).
-- *Calimero* (engineering lead): built the protocol that became the company's direction, designed both generations, primary reviewer across the codebase.
-- Shipped, adopted open source: *freyr* at 2.3k stars and 42k Docker pulls, plus upstream work in tickrs, Apache Arrow, rustyline, and dialoguer.
+- *NEAR Protocol* (core engineer): creator and principal author of its #link("https://github.com/near/near-jsonrpc-client-rs")[Rust JSON-RPC client], and 80+ merged PRs across #link("https://github.com/near/nearcore")[nearcore] itself (the 2.6k-star reference client).
+- *#link("https://github.com/calimero-network/core")[Calimero]* (engineering lead): built the protocol that became the company's direction, designed both generations, primary reviewer across the codebase.
+- Shipped, adopted open source: *#link("https://github.com/miraclx/freyr-js")[freyr]* at 2.3k stars and 42k+ Docker pulls, plus upstream work in tickrs, Apache Arrow, rustyline, and dialoguer.
 
 = Experience
 
@@ -78,7 +78,7 @@
 #block(breakable: false)[
   #entry[Open Source & Freelance][January 2016 – Present]
   #role[Software Engineer][Remote]
-  - *freyr* (Node.js): an open-source music-downloader CLI (Spotify, Apple Music, Deezer) with metadata and library organization. 2.3k+ stars, 42k+ DockerHub pulls.
+  - *#link("https://github.com/miraclx/freyr-js")[freyr]* (Node.js): an open-source music-downloader CLI (Spotify, Apple Music, Deezer) with metadata and library organization. 2.3k+ stars, 42k+ DockerHub pulls.
   - *cargo-workspaces* (Rust): a maintained fork with substantial patches for nearcore's workspace complexity; *xget* (Node.js): a concurrent chunked web-content downloader.
   - *Upstream:* merged contributions to tickrs (1.7k-star stock TUI, 17 PRs), Apache Arrow's object_store, rustyline, and dialoguer.
 ]
