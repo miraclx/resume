@@ -53,7 +53,7 @@
 #entry[Independent Engineering & Consulting][September 2025 – Present]
 #role[Rust Systems & Protocol Engineering][Remote]
 - *Real-time bidding (adtech):* profiled the hot path to cut sustained tail-latency spikes from roughly 250ms to within a hard 150ms budget at tens of thousands of RPS, then built the analytics pipeline that turns the bid-stream into signals (competitor-landscape, security, forensics).
-- *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed overlay and services layer I architected and built. Reach any machine by its ed25519 key rather than its IP, then gate each service on a capability rooted in that same key: verified offline with no coordinator, attenuable, revocable. Runs over iroh (which handles NAT traversal) or a UDP transport I wrote from scratch to learn one; any node exposes capability-gated services (keyless SSH, HTTP fetch, BLAKE3-verified transfer, link measurement) behind one CLI (swoosh), backed by 300+ integration tests.
+- *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed overlay and services layer I architected and built. Reach any machine by its ed25519 key rather than its IP, then gate each service on a capability rooted in that same key: attenuable, expiring, verified offline, and revocable via a denylist the node checks at admission. Runs over iroh (which handles NAT traversal) or a UDP transport I wrote from scratch to learn one; any node exposes capability-gated services (keyless SSH, HTTP fetch, BLAKE3-verified transfer, link measurement) behind one CLI (swoosh), backed by 300+ integration tests.
 - *Private EVM L2:* built the sequencing and execution engine in Rust: an actor-model core and a purpose-built zero-copy storage layer with snapshot-isolated reads and atomic block-commit, on revm and alloy.
 - *BIM / 3D reconstruction:* built software that reconstructs LOD200 building models from noisy, occluded real-world point-cloud scans: denoising, clutter and furniture removal, and classification of architectural elements (walls, windows, stairs, arches), with a guided UX that folds the user into the analysis.
 
@@ -71,7 +71,7 @@
   #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
   #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][San Francisco, CA]
   - 80+ merged PRs across nearcore (the 2.6k-star NEAR reference client) and its Rust tooling; creator and principal author of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
-  - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that led to a working group for reinventing its virtual machine.
+  - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that fed into a working group for reinventing its virtual machine.
   - Cut CI and Docker build times by up to 82%, most notably for the FastAuth account-recovery node tests.
 
   #role[Senior Software Engineer, Node Interfaces #h(6pt) (March 2021 – December 2021)][]
