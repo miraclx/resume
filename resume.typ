@@ -44,7 +44,7 @@
 #v(3pt)
 
 = Highlights
-- *NEAR Protocol* (core engineer): creator and principal author of its #link("https://github.com/near/near-jsonrpc-client-rs")[Rust JSON-RPC client], and 80+ merged PRs across #link("https://github.com/near/nearcore")[nearcore] itself (the 2.6k-star reference client).
+- *NEAR Protocol* (core engineer): creator and principal author of its #link("https://github.com/near/near-jsonrpc-client-rs")[Rust JSON-RPC client], and 80+ merged PRs across #link("https://github.com/near/nearcore")[nearcore] itself, NEAR's core protocol client.
 - *#link("https://github.com/calimero-network/core")[Calimero]* (engineering lead): built the protocol that became the company's direction, designed both generations, primary reviewer across the codebase.
 - Shipped, adopted open source: *#link("https://github.com/miraclx/freyr-js")[freyr]* at 2.3k stars and 42k+ Docker pulls, plus upstream work in tickrs, Apache Arrow, rustyline, and dialoguer.
 
@@ -66,7 +66,7 @@
 #block(breakable: false)[
   #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
   #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][Remote]
-  - 80+ merged PRs across nearcore (the 2.6k-star NEAR reference client) and its Rust tooling; creator and principal author of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
+  - 80+ merged PRs across nearcore, NEAR's core protocol client, and its Rust tooling; creator and principal author of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
   - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that fed into a working group for reinventing its virtual machine.
   - Cut CI and Docker build times by up to 82%, most notably for the FastAuth account-recovery node tests.
 
