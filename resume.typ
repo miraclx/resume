@@ -58,7 +58,7 @@
 
 #entry[Calimero Network][September 2023 – August 2025]
 #role[Senior Software Engineer, then Engineering Lead][Remote]
-- Brought in as the systems engineer for Calimero's hardest problems across the stack. When the original private-sharding direction stalled, the protocol I prototyped won the internal hackathon and became the company's new one.
+- Calimero is a peer-to-peer app platform: apps run as WASM on each user's own node, and a group's shared state syncs between nodes over CRDTs, end-to-end encrypted. I was brought in as the systems engineer for its hardest problems; when the original private-sharding direction stalled, the protocol I prototyped won the internal hackathon and became that platform.
 - Architected and built that protocol's stack end to end: the node-to-node wire format, networking (rust-libp2p, hole-punching and relay), CRDT-state foundations, recursive state sync between nodes, an actor-model core, a purpose-built zero-copy storage layer, a Wasmer runtime with a swappable engine, and the guest-app SDK (proc-macros plus FFI).
 - Designed both generations of the protocol, a transactional proof-of-concept then an eventually-consistent redesign, and its end-to-end encryption for dynamic groups; authored the adopted spec paper and a paper on the encryption.
 - As Engineering Lead, grew a team mostly new to Rust through hands-on knowledge-transfer, and hired and developed several engineers; primary reviewer across protocol proposals and the codebase.
