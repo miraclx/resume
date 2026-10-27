@@ -44,8 +44,8 @@
 #v(3pt)
 
 = Highlights
-- *NEAR Protocol* (core engineer): creator and principal author of its #link("https://github.com/near/near-jsonrpc-client-rs")[Rust JSON-RPC client], and 80+ merged PRs across #link("https://github.com/near/nearcore")[nearcore] itself, NEAR's core protocol client.
-- *#link("https://github.com/calimero-network/core")[Calimero]* (engineering lead): built the protocol that became the company's direction, designed both generations, primary reviewer across the codebase.
+- *NEAR Protocol* (core engineer): #link("https://github.com/near/nearcore")[protocol internals], Rust SDK, contract ABI generation and developer tooling; creator and principal author of its #link("https://github.com/near/near-jsonrpc-client-rs")[Rust JSON-RPC client].
+- *#link("https://github.com/calimero-network/core")[Calimero]* (engineering lead): my protocol prototype became its P2P application platform. Designed both generations, built the #link("https://github.com/calimero-network/core/pull/12")[Wasmer-based runtime foundation] and led the whole engineering team.
 - Shipped, adopted open source: *#link("https://github.com/miraclx/freyr-js")[freyr]* at 2.3k stars and 42k+ Docker pulls, plus upstream work in tickrs, Apache Arrow, rustyline, and dialoguer.
 
 = Experience
@@ -53,13 +53,13 @@
 #entry[Independent Engineering & Consulting][September 2025 – Present]
 #role[Rust Systems & Protocol Engineering][Remote]
 - *Real-time bidding (adtech):* profiled the hot path to cut sustained tail-latency spikes from roughly 250ms to within a hard 150ms budget at tens of thousands of RPS, then built the analytics pipeline that turns the bid-stream into signals (competitor-landscape, security, forensics).
-- *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed overlay and services layer I architected and built. Reach any machine by its ed25519 key, then gate each service on a capability rooted in that key: attenuable, verified offline, revocable via a node-checked denylist. Services (keyless SSH, HTTP fetch, BLAKE3-verified transfer) run over iroh or a UDP transport I wrote from scratch to learn one, behind one CLI (swoosh), backed by 300+ tests.
+- *theia* (Rust, #link("https://github.com/theia-hq")[github.com/theia-hq]): a public-key-addressed P2P overlay and service layer I architected and built. Reach a peer by its ed25519 key, then gate each service on a capability rooted in that key: attenuable, verified offline, revocable via a node-checked denylist. Services (keyless SSH, HTTP fetch, BLAKE3-verified transfer) run over iroh or a UDP transport I wrote from scratch to learn one, behind one CLI (swoosh), backed by 300+ tests.
 - *Private EVM L2:* built the sequencing and execution engine in Rust: an actor-model core and a purpose-built zero-copy storage layer with snapshot-isolated reads and atomic block-commit, on revm and alloy.
 
 #entry[Calimero Network][September 2023 – August 2025]
 #role[Senior Software Engineer, then Engineering Lead][Remote]
 - Calimero is a peer-to-peer app platform: apps run as WASM on each user's own node, and a group's shared state syncs between nodes over CRDTs, end-to-end encrypted. I was brought in as the systems engineer for its hardest problems; when the original private-sharding direction stalled, the protocol I prototyped won the internal hackathon and became that platform.
-- Architected and built that protocol's stack end to end: the node-to-node wire format, networking (rust-libp2p, hole-punching and relay), CRDT-state foundations, recursive state sync between nodes, an actor-model core, a purpose-built zero-copy storage layer, a Wasmer runtime with a swappable engine, and the guest-app SDK (proc-macros plus FFI).
+- Architected and built that protocol's stack end to end: the node-to-node wire format, networking (rust-libp2p, hole-punching and relay), CRDT-state foundations, recursive state sync between nodes, an actor-model core, a purpose-built zero-copy storage layer, a Wasmer-based application runtime with a swappable engine, and the guest-app SDK (proc-macros plus FFI).
 - Designed both generations of the protocol, a transactional proof-of-concept then an eventually-consistent redesign, and its end-to-end encryption for dynamic groups; authored the adopted spec paper and a paper on the encryption.
 - As Engineering Lead, grew a team mostly new to Rust through hands-on knowledge-transfer, and hired and developed several engineers; primary reviewer across protocol proposals and the codebase.
 
@@ -67,7 +67,7 @@
   #entry[NEAR (Pagoda, Inc.)][March 2021 – June 2023]
   #role[Senior Software Engineer, Core & Developer Tools #h(6pt) (December 2021 – June 2023)][Remote]
   - 80+ merged PRs across nearcore, NEAR's core protocol client, and its Rust tooling; creator and principal author of the Rust NEAR JSON-RPC client, which seeded the sandboxed node testing environment, the Rust NEAR CLI, and the indexer for the official NEAR explorer.
-  - Introduced contract ABIs to NEAR: authored the NearSchema derive in near-sdk-rs and contributed to cargo-near; discovered and documented exploits in the NEAR BOS platform that fed into a working group for reinventing its virtual machine.
+  - Helped introduce contract ABIs to NEAR: authored the NearSchema derive and worked across the SDK and build tooling on ABI generation, embedding and versioned serialization across the dynamic-library boundary; discovered and documented exploits in the NEAR BOS platform that fed into a working group for reinventing its virtual machine.
   - Cut CI and Docker build times by up to 82%, most notably for the FastAuth account-recovery node tests.
 
   #role[Senior Software Engineer, Node Interfaces #h(6pt) (March 2021 – December 2021)][]
