@@ -94,7 +94,7 @@
 ]
 
 = Education
-#entry[Redeemer's University, Osun, Nigeria][July 2018 – May 2021]
+#entry[Redeemer's University][July 2018 – May 2021]
 #role[Computer Science][]
 #text(size: 9.5pt)[Operating Systems, Compiler Architecture, Language Development, Databases, Algorithms.]
 
