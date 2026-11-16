@@ -44,7 +44,7 @@
 #v(3pt)
 
 = Highlights
-- *NEAR Protocol* (core engineer): #link("https://github.com/near/nearcore")[protocol internals], Rust SDK, contract ABI generation and developer tooling; creator and principal author of its #link("https://github.com/near/near-jsonrpc-client-rs")[Rust JSON-RPC client].
+- *NEAR Protocol* (core engineer): brought in for engineering rigour. Led the typed, parse-once AccountId across #link("https://github.com/near/nearcore")[nearcore], built its crate-compliance tooling, created the #link("https://github.com/near/near-jsonrpc-client-rs")[Rust JSON-RPC client], then maintained both sides of the contract runtime boundary: the node's VM interface and the Rust SDK, including contract ABIs.
 - *#link("https://github.com/calimero-network/core")[Calimero]* (engineering lead): my protocol prototype became its P2P application platform. Designed both generations, built the #link("https://github.com/calimero-network/core/pull/12")[Wasmer-based runtime foundation] and led the whole engineering team.
 - Shipped, adopted open source: *#link("https://github.com/miraclx/freyr-js")[freyr]* at 2.3k stars and 42k+ Docker pulls, plus upstream work in tickrs, Apache Arrow, rustyline, and dialoguer.
 
@@ -58,7 +58,7 @@
 
 #entry[Calimero Network][September 2023 – August 2025]
 #role[Senior Software Engineer, then Engineering Lead][Remote]
-- Calimero is a peer-to-peer app platform: apps run as WASM on each user's own node, and a group's shared state syncs between nodes over CRDTs, end-to-end encrypted. I was brought in as the systems engineer for its hardest problems; when the original private-sharding direction stalled, the protocol I prototyped won the internal hackathon and became that platform.
+- Calimero is a peer-to-peer app platform: sandboxed application logic runs as WASM on each user's own node, and a group's shared state syncs between nodes over CRDTs, end-to-end encrypted. I was brought in as the systems engineer for its hardest problems; when the original private-sharding direction stalled, the protocol I prototyped won the internal hackathon and became that platform.
 - Architected and built that protocol's stack end to end: the node-to-node wire format, networking (rust-libp2p, hole-punching and relay), CRDT-state foundations, recursive state sync between nodes, an actor-model core, a purpose-built zero-copy storage layer, a Wasmer-based application runtime with a swappable engine, and the guest-app SDK (proc-macros plus FFI).
 - Designed both generations of the protocol, a transactional proof-of-concept then an eventually-consistent redesign, and its end-to-end encryption for dynamic groups; authored the adopted spec paper and a paper on the encryption.
 - As Engineering Lead, grew a team mostly new to Rust through hands-on knowledge-transfer, and hired and developed several engineers; primary reviewer across protocol proposals and the codebase.
@@ -71,7 +71,7 @@
   - Cut CI and Docker build times by up to 82%, most notably for the FastAuth account-recovery node tests.
 
   #role[Senior Software Engineer, Node Interfaces #h(6pt) (March 2021 – December 2021)][]
-  - Led the standardization of a strictly-typed AccountId, drove workspace crates to independence for crates.io, and built the tooling (themis) and CI pipelines for crate compliance, fuzz, and simulation testing.
+  - Led the move to a strictly-typed, parse-once AccountId (previously strings validated ad hoc), which surfaced invalid values already in live network state; drove workspace crates to independence for crates.io, and built the tooling (themis) and CI pipelines for crate compliance, fuzz, and simulation testing.
 ]
 
 #block(breakable: false)[
